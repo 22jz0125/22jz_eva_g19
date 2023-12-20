@@ -18,14 +18,16 @@ public class ItemDAO {
 		try(Connection cn = manager.getConnection()) {
 			String sql = "SELECT * FROM items";
 			PreparedStatement stmt = cn.prepareStatement(sql);
+			//System.out.println(stmt + " stmt");
 			ResultSet rs = stmt.executeQuery();
-			System.out.println(rs);
+			int count= 0;
+			//System.out.println(rs + "　rsだよ");
 			
 			// データをリストに格納
 			while(rs.next()) {
-				System.out.println(rs2model(rs) + " rs2model");
 				Item item = rs2model(rs);
 				list.add(item);
+				System.out.println(list + " rs2modelのadd  " + ++count);
 				
 			}
 		} catch(SQLException e) {

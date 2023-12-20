@@ -30,7 +30,7 @@ public class ItemList extends HttpServlet {
 		//すべてのデータを取得
 		List<Item> list = dao.get();
 		
-		System.out.println("daoだお" + list);
+		System.out.println("listのdaoだお" + list);
 		ObjectMapper mapper = new ObjectMapper();
 		
 		try {
