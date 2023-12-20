@@ -43,7 +43,7 @@ public class ItemList extends HttpServlet {
 		catch (JsonProcessingException e) {
 			e.printStackTrace();
 		}
-		System.out.println("htmlに送るよ");
+//		System.out.println("htmlに送るよ");
 //		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/index.html");
 //		dispatcher.forward(request, response);
 	}
